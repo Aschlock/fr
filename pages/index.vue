@@ -32,7 +32,7 @@
 export default {
   head() {
     return {
-      title: 'qwe'
+      title: 'Хуявная'
     }
   },
   data() {
