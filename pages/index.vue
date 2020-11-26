@@ -36,8 +36,8 @@
           </b-container>
           <b-container fluid>
             <b-row>
-              <b-col lg="4" sm="12" class="mb-3 mb-lg-0" v-for="title in titles">
-                <b-card class="shadow-sm bg-primary">
+              <b-col lg="3" sm="12" class="mb-3 mb-lg-0" v-for="title in titles">
+                <b-card class="shadow-sm border-0">
                   <b-card-title>{{ title }}</b-card-title>
                   <hr class="my-1">
                   qweqwe
@@ -60,19 +60,12 @@ export default {
   },
   data() {
     return {
-      titles: [123, 456, 789]
+      titles: [123, 456, 789, 101]
     }
   }
 }
 </script>
 
 <style>
-body {
-  background: #f4f4f4;
-}
-
-.container {
-  color: #333;
-}
 
 </style>
