@@ -37,7 +37,7 @@
           <b-container fluid>
             <b-row>
               <b-col lg="4" sm="12" class="mb-3 mb-lg-0" v-for="title in titles">
-                <b-card class="shadow-sm">
+                <b-card class="shadow-sm bg-primary">
                   <b-card-title>{{ title }}</b-card-title>
                   <hr class="my-1">
                   qweqwe
