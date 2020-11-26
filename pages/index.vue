@@ -30,6 +30,11 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: 'qwe'
+    }
+  },
   data() {
     return {
       titles: [123, 456, 789]
