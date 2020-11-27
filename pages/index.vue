@@ -26,7 +26,7 @@
                     </b-navbar-nav>
                     <b-navbar-nav class="ml-auto">
                       <div>
-                          User
+                        User
                       </div>
                     </b-navbar-nav>
                   </b-collapse>
@@ -36,11 +36,13 @@
           </b-container>
           <b-container fluid>
             <b-row>
-              <b-col lg="3" sm="12" class="mb-3 mb-lg-0" v-for="title in titles">
+              <b-col lg="3" sm="12" class="mb-3 mb-lg-0" v-for="card in cards" :key="card.id">
                 <b-card class="shadow-sm border-0">
-                  <b-card-title>{{ title }}</b-card-title>
+                  <b-card-title class="d-flex">{{ card.title }}
+                    <b-button class="ml-auto font-weight-bold d-flex align-items-center" style="line-height: 1">+</b-button>
+                  </b-card-title>
                   <hr class="my-1">
-                  qweqwe
+                  {{ card.text }}
                 </b-card>
               </b-col>
             </b-row>
@@ -60,7 +62,29 @@ export default {
   },
   data() {
     return {
-      titles: [123, 456, 789, 101]
+      titles: [123, 456, 789, 101],
+      cards: [
+        {
+          id: 1,
+          title: 'Транзакции',
+          text: 'asd'
+        },
+        {
+          id: 2,
+          title: 1,
+          text: 'asd'
+        },
+        {
+          id: 3,
+          title: 1,
+          text: 'asd'
+        },
+        {
+          id: 4,
+          title: 1,
+          text: 'asd'
+        },
+      ]
     }
   }
 }
