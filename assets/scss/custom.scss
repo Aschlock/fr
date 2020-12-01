@@ -1,9 +1,15 @@
 $primary: #228CDB;
-$dark: #292F36;
+$dark: #353D46;
+
+$theme-colors: (
+  'gray-100': #333,
+);
 
 $body-bg: #F5F5F5;
-$body-color: #292F36;
+$body-color: #353D46;
 $font-family-base: 'Roboto';
+
+$list-group-border-width: 0;
 
 
 @import "bootstrap/scss/bootstrap.scss";
