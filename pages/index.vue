@@ -4,15 +4,15 @@
       <b-row>
         <div class="vh-100 bg-white d-none d-lg-block pt-3 border-right">
           <b-nav vertical>
-            <b-nav-item class="px-2" active>
+            <b-nav-item class="pl-1 pr-5" active>
               <b-icon icon="file-earmark-text" class="mr-3"></b-icon>
               Документы
             </b-nav-item>
-            <b-nav-item class="px-2">
+            <b-nav-item class="pl-1 pr-5">
               <b-icon icon="bar-chart" class="mr-3"></b-icon>
               Link
             </b-nav-item>
-            <b-nav-item class="px-2">
+            <b-nav-item class="pl-1 pr-5">
               <b-icon icon="bookmark" class="mr-3"></b-icon>
               Another Link
             </b-nav-item>
@@ -55,8 +55,17 @@
                         </div>
                       </b-list-group-item>
                     </template>
-                    <b-list-group-item href="#" v-if="cards[0].items.length >= 5" class="text-primary">
-                      Показать все
+                    <b-list-group-item href="#" v-if="cards[0].items.length > 5" class="text-primary">
+                      <div class="d-flex justify-content-between">
+                        <div>
+                          Показать все
+                        </div>
+                        <div>
+                          <b-badge variant="light" class="text-primary">
+                            {{ cards[0].items.length }}
+                          </b-badge>
+                        </div>
+                      </div>
                     </b-list-group-item>
                   </b-list-group>
 
