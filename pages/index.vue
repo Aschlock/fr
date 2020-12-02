@@ -40,7 +40,7 @@
             <b-row class="mb-4">
               <b-col cols="3" v-for="i in 4">
                 <b-card class="shadow-sm border-0" body-class="d-flex p-2">
-                  <div>{{percents}}
+                  <div>
                     <svg width="64px" height="64px" viewBox="0 0 42 42" class="donut"
                          style="transform: rotate(-90deg);" v-b-tooltip.hover="percents[i-1] + ' %'">
                       <circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>
@@ -160,10 +160,10 @@ export default {
           ]
         },
       percents: [
-        (Math.random() * 100).toFixed(0),
-        (Math.random() * 100).toFixed(0),
-        (Math.random() * 100).toFixed(0),
-        (Math.random() * 100).toFixed(0),
+        13,
+        49,
+        88,
+        4,
       ]
 
     }
