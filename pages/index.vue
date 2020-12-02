@@ -47,12 +47,13 @@
                       <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent"
                               stroke="whitesmoke" stroke-width="3"></circle>
                       <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent"
-                              stroke="blueviolet" stroke-width="3" :stroke-dasharray="`${percents[i-1]} ${100-percents[i-1]}`"
+                              stroke="#F58F29" stroke-width="3" :stroke-dasharray="`${percents[i-1]} ${100-percents[i-1]}`"
                               stroke-dashoffset="0"></circle>
                     </svg>
                   </div>
                   <div class="px-3">
-                    <h4>Жопа</h4>
+                    <h4 class="m-0">Задача {{ i }}</h4>
+                    <small class="text-muted"><b>{{ percents[i-1] }}</b> / 100</small>
                   </div>
                 </b-card>
               </b-col>
@@ -143,7 +144,7 @@ export default {
       payments:
         {
           id: 1,
-          title: 'Транзакции',
+          title: 'Переводы',
           items: [
             {
               isIncome: true,
