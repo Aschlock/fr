@@ -12,10 +12,20 @@
               <b-icon icon="bar-chart" class="mr-3"></b-icon>
               Link
             </b-nav-item>
-            <b-nav-item class="pl-1 pr-5">
-              <b-icon icon="bookmark" class="mr-3"></b-icon>
-              Another Link
+            <b-nav-item class="pl-1 pr-5" v-b-toggle="'collapse-2'">
+              <div class="dropdown-toggle">
+                <b-icon icon="bookmark" class="mr-3"></b-icon>
+                Another Link
+              </div>
             </b-nav-item>
+            <b-collapse id="collapse-2">
+              <b-nav vertical>
+                <b-nav-item class="pl-3 pr-5" v-for="i in 5">
+                  <b-icon icon="box-seam" class="mr-3"></b-icon>
+                  Link
+                </b-nav-item>
+              </b-nav>
+            </b-collapse>
           </b-nav>
         </div>
         <b-col>
@@ -38,7 +48,8 @@
               <b-col xl="3" lg="4" sm="12" class="mb-3">
                 <b-card body-class="px-4 py-3" class="shadow-sm border-0">
                   <b-card-title class="d-flex">{{ payments.title }}
-                    <b-button class="ml-auto font-weight-bold d-flex align-items-center text-secondary-200" variant="secondary-100" style="line-height: 1"
+                    <b-button class="ml-auto font-weight-bold d-flex align-items-center text-secondary-200"
+                              variant="secondary-100" style="line-height: 1"
                               @click="addTrans(), makeToast()">+
                     </b-button>
                   </b-card-title>
@@ -50,13 +61,15 @@
                         <div class="d-flex w-100 justify-content-between">
                           <div>
                             <p class="mb-0">{{ item.payer }}</p>
-                            <small class="text-muted" :id="'tooltip-' + index">№{{ payments.items.length - index }}, {{ item.date.toLocaleDateString('ru') }}</small>
+                            <small class="text-muted" :id="'tooltip-' + index">№{{ payments.items.length - index }},
+                              {{ item.date.toLocaleDateString('ru') }}</small>
                             <b-tooltip title="123" triggers="hover" :target="'tooltip-' + index">
                               {{ item.date.toLocaleString('ru') }}
                             </b-tooltip>
                           </div>
                           <div>
-                            <p v-if="item.isIncome" class="text-success font-weight-bold text-nowrap">+{{ item.sum }} ₽</p>
+                            <p v-if="item.isIncome" class="text-success font-weight-bold text-nowrap">+{{ item.sum }}
+                              ₽</p>
                             <p v-else class="text-warning font-weight-bold text-nowrap">–{{ item.sum }} ₽</p>
                           </div>
                         </div>
@@ -154,6 +167,18 @@ export default {
   position: sticky;
   top: 0;
   overflow-y: auto;
+}
+
+.left-nav-menu a {
+  color: #738396;
+}
+
+.left-nav-menu a:hover {
+  color: #353D46;
+}
+
+.left-nav-menu .nav-item:hover {
+  background: #F3F5F6;
 }
 
 </style>
