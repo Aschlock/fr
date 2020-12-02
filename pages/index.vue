@@ -38,24 +38,8 @@
               </b-col>
             </b-row>
             <b-row class="mb-4">
-              <b-col cols="3" v-for="i in 4">
-                <b-card class="shadow-sm border-0" body-class="d-flex p-2">
-                  <div>
-                    <svg width="64px" height="64px" viewBox="0 0 42 42" class="donut"
-                         style="transform: rotate(-90deg);" v-b-tooltip.hover="percents[i-1] + ' %'">
-                      <circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>
-                      <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent"
-                              stroke="whitesmoke" stroke-width="3"></circle>
-                      <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent"
-                              stroke="#F58F29" stroke-width="3" :stroke-dasharray="`${percents[i-1]} ${100-percents[i-1]}`"
-                              stroke-dashoffset="0"></circle>
-                    </svg>
-                  </div>
-                  <div class="px-3">
-                    <h4 class="m-0">Задача {{ i }}</h4>
-                    <small class="text-muted"><b>{{ percents[i-1] }}</b> / 100</small>
-                  </div>
-                </b-card>
+              <b-col cols="3" v-for="percent in percents">
+                <task-tracker v-bind:percent="percent"></task-tracker>
               </b-col>
             </b-row>
             <b-row>
@@ -114,7 +98,9 @@
 </template>
 
 <script>
+import TaskTracker from "@/components/task-tracker";
 export default {
+  components: {TaskTracker},
   head() {
     return {
       title: 'Хуячечная'
@@ -201,12 +187,6 @@ export default {
   background: #F3F5F6;
 }
 
-.donut-segment:hover {
-  stroke-width: 5px;
-}
 
-.donut-segment, .donut-segment:hover {
-  transition: .2s;
-}
 
 </style>
