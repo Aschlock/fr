@@ -3,6 +3,8 @@ $dark: #353D46;
 
 $theme-colors: (
   'gray-100': #333,
+  'secondary-100': #f8f9fa,
+  'secondary-200': #8797ab,
 );
 
 $tooltip-bg: #353D46;
@@ -14,6 +16,10 @@ $font-family-base: 'Roboto';
 
 $list-group-border-width: 0;
 
+$spacer: 1rem;
+$spacers: (
+  6: ($spacer * 4)
+);
 
 @import "bootstrap/scss/bootstrap.scss";
 @import 'bootstrap-vue/dist/bootstrap-vue.css';
