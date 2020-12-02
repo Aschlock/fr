@@ -20,7 +20,7 @@
             </b-nav-item>
             <b-collapse id="collapse-2">
               <b-nav vertical>
-                <b-nav-item class="pl-3 pr-5" v-for="i in 255">
+                <b-nav-item class="pl-3 pr-5" v-for="i in 15">
                   <b-icon icon="box-seam" class="mr-3"></b-icon>
                   Link
                 </b-nav-item>
@@ -39,8 +39,21 @@
             </b-row>
             <b-row class="mb-4">
               <b-col cols="3" v-for="i in 4">
-                <b-card class="shadow-sm border-0">
-                  123
+                <b-card class="shadow-sm border-0" body-class="d-flex p-2">
+                  <div>{{percents}}
+                    <svg width="64px" height="64px" viewBox="0 0 42 42" class="donut"
+                         style="transform: rotate(-90deg);" v-b-tooltip.hover="percents[i-1] + ' %'">
+                      <circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>
+                      <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent"
+                              stroke="whitesmoke" stroke-width="3"></circle>
+                      <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent"
+                              stroke="blueviolet" stroke-width="3" :stroke-dasharray="`${percents[i-1]} ${100-percents[i-1]}`"
+                              stroke-dashoffset="0"></circle>
+                    </svg>
+                  </div>
+                  <div class="px-3">
+                    <h4>Жопа</h4>
+                  </div>
                 </b-card>
               </b-col>
             </b-row>
@@ -146,6 +159,12 @@ export default {
             },
           ]
         },
+      percents: [
+        (Math.random() * 100).toFixed(0),
+        (Math.random() * 100).toFixed(0),
+        (Math.random() * 100).toFixed(0),
+        (Math.random() * 100).toFixed(0),
+      ]
 
     }
   }
@@ -179,6 +198,14 @@ export default {
 
 .left-nav-menu .nav-item:hover {
   background: #F3F5F6;
+}
+
+.donut-segment:hover {
+  stroke-width: 5px;
+}
+
+.donut-segment, .donut-segment:hover {
+  transition: .2s;
 }
 
 </style>
