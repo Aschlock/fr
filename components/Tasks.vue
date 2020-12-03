@@ -20,7 +20,7 @@
 
 <script>
 export default {
-name: "task-tracker",
+name: "Tasks",
   props: ['percent']
 }
 </script>

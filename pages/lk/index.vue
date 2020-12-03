@@ -10,7 +10,7 @@
       </b-row>
       <b-row class="mb-4">
         <b-col cols="3" v-for="percent in percents">
-          <task-tracker v-bind:percent="percent"></task-tracker>
+          <Tasks v-bind:percent="percent"></Tasks>
         </b-col>
       </b-row>
       <b-row>
@@ -67,11 +67,11 @@
 </template>
 
 <script>
-import TaskTracker from "@/components/task-tracker";
+import Tasks from "@/components/Tasks";
 import Menu from "@/components/Menu";
 
 export default {
-  components: {Menu, TaskTracker},
+  components: {Menu, Tasks},
   head() {
     return {
       title: 'Хуячечная'
