@@ -3,7 +3,7 @@
     <b-container fluid>
       <b-row>
         <Menu />
-        <b-col>
+        <b-col class="px-0 px-md-3">
           <Nuxt />
         </b-col>
       </b-row>
