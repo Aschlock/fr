@@ -17,7 +17,7 @@
       </b-nav-item>
       <b-collapse id="collapse-2">
         <b-nav vertical>
-          <b-nav-item class="pl-3 pr-5" v-for="i in 25">
+          <b-nav-item class="pl-3 pr-5" v-for="i in 25" :key="i">
             <b-icon icon="box-seam" class="mr-3"></b-icon>
             Link
           </b-nav-item>

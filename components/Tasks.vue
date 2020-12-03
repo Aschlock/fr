@@ -7,7 +7,7 @@
         <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent"
                 stroke="whitesmoke" stroke-width="3"></circle>
         <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent"
-                stroke="#F58F29" stroke-width="3" :stroke-dasharray="`${percent} ${100-percent}`"
+                stroke="#F58F29" stroke-width="3" v-bind:stroke-dasharray="percent +' ' + (100 - percent)"
                 stroke-dashoffset="0"></circle>
       </svg>
     </div>
@@ -20,8 +20,8 @@
 
 <script>
 export default {
-name: "Tasks",
-  props: ['percent']
+  name: "Tasks",
+  props: ['percent'],
 }
 </script>
 
