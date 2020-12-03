@@ -74,8 +74,8 @@ export default {
           ]
         },
       percents: [
-        5,
-        49,
+        100,
+        4,
         88,
         23
       ]

@@ -2,7 +2,7 @@
   <div class="left-nav-menu vh-100 bg-white d-none d-lg-block pt-3 border-right">
     <b-nav vertical>
         <b-nav-item class="" link-classes="linklink" :to="'/lk'">
-          <b-icon icon="blank" class="mr-3"></b-icon>
+          <b-icon icon="house" class="mr-3"></b-icon>
           Главная
         </b-nav-item>
       <b-nav-item class="" link-classes="linklink" :to="'/lk/docs'">
