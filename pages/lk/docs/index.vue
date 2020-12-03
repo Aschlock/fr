@@ -4,7 +4,7 @@
       <b-row class="mb-3">
         <b-col>
           <h1>
-            Главная
+            Документы
           </h1>
         </b-col>
       </b-row>
