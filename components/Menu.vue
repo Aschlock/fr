@@ -17,7 +17,7 @@
       </b-nav-item>
       <b-collapse id="collapse-2">
         <b-nav vertical>
-          <b-nav-item class="pl-3 pr-5" v-for="i in 15">
+          <b-nav-item class="pl-3 pr-5" v-for="i in 25">
             <b-icon icon="box-seam" class="mr-3"></b-icon>
             Link
           </b-nav-item>
@@ -34,5 +34,21 @@ export default {
 </script>
 
 <style scoped>
+.left-nav-menu {
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+}
 
+.left-nav-menu a {
+  color: #738396;
+}
+
+.left-nav-menu a:hover {
+  color: #353D46;
+}
+
+.left-nav-menu .nav-item:hover {
+  background: #F3F5F6;
+}
 </style>
