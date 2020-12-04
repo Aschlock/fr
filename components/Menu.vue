@@ -1,6 +1,6 @@
 <template>
-  <div class="w-md-100">
-    <b-collapse id="qweqwe" class="left-nav-menu vh-100 bg-white d-none d-lg-flex flex-column pt-3 border-right" is-nav>
+  <div>
+    <div class="left-nav-menu vh-100 bg-white d-none d-lg-flex flex-column pt-3 border-right">
 
       <b-nav vertical class="mb-3">
         <div class="d-flex align-items-center">
@@ -47,17 +47,7 @@
           Настройки
         </b-nav-item>
       </b-nav>
-
-
-    </b-collapse>
-    <div class="pt-lg-0 pt-3 px-3 px-md-4 px-lg-0">
-      <div v-b-toggle="'qweqwe'" class="ml-auto" style="position:absolute; top: 0; right: 0; z-index: 123;">
-        <svg height="32px" id="Layer_1" viewBox="0 0 32 32" style="fill: #333"
-             width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
-             xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
-      </div>
     </div>
-
   </div>
 </template>
 
