@@ -39,7 +39,7 @@ export default {
   height: 2.5em;
   z-index: 1;
   fill: #f59535;
-  animation: an-check .5s ease-in-out;
+  animation: an-check .3s ease-in-out;
 }
 
 .card:hover .donut-segment {
