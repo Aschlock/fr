@@ -1,9 +1,9 @@
 <template>
   <b-card class="shadow-sm border-0 user-select-none" body-class="d-flex align-items-start p-2">
-    <div class="position-relative">
+    <div class="position-relative" v-b-tooltip.hover="percent + ' %'">
       <b-icon-check class="task-check" v-if="percent == 100"/>
       <svg width="64px" height="64px" viewBox="0 0 42 42" class="donut"
-           style="transform: rotate(-90deg);" v-b-tooltip.hover="percent + ' %'">
+           style="transform: rotate(-90deg);">
         <circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>
         <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent"
                 stroke="whitesmoke" stroke-width="3"></circle>
