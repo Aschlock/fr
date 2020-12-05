@@ -24,6 +24,7 @@
         <b-nav-item class="" link-classes="linklink">
           <b-icon icon="bar-chart" class="mr-3"></b-icon>
           Link
+          <b-badge class="float-right badge-pill" variant="primary">{{ (Math.random() * 100).toFixed(0) }}</b-badge>
         </b-nav-item>
         <b-nav-item class="" link-classes="linklink" v-b-toggle="'collapse-2'">
           <div class="dropdown-toggle">

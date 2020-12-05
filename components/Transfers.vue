@@ -4,7 +4,8 @@
       <b-card-title class="d-flex">{{ payments.title }}
         <b-button class="ml-auto font-weight-bold d-flex align-items-center text-secondary-200"
                   variant="secondary-100" style="line-height: 1"
-                  @click="$bvModal.show('modal-for-create')">+
+                  @click="$bvModal.show('modal-for-create')">
+          +
         </b-button>
 
         <b-modal id="modal-for-create" hide-footer hide-header size="md">

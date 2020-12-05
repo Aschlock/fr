@@ -22,11 +22,10 @@
 
 <script>
 import Tasks from "@/components/Tasks";
-import Menu from "@/components/Menu";
 import Transfers from "@/components/Transfers";
 
 export default {
-  components: {Transfers, Menu, Tasks},
+  components: {Transfers, Tasks},
   head() {
     return {
       title: 'Хуячечная'
@@ -76,7 +75,7 @@ export default {
       percents: [
         100,
         4,
-        88,
+        95,
         23
       ]
 
