@@ -141,13 +141,4 @@ export default {
 
 <style>
 
-.transactions .list-group-item {
-  transition: .2s;
-}
-
-.transactions .list-group-item:hover {
-  background: whitesmoke;
-  transition: .2s;
-}
-
 </style>

@@ -13,8 +13,15 @@
                   stroke-dashoffset="0"></circle>
         </svg>
       </div>
-      <div class="px-3">
-        <h5 class="m-0">Задача {{ index + 1 }}</h5>
+      <div class="ml-3 pr-2">
+
+          <div class="d-flex justify-between">
+            <h5 class="m-0">Задача {{ index + 1 }}</h5>
+<!--            <small class="ml-auto text-secondary-200">-->
+<!--              12.12.2020-->
+<!--            </small>-->
+          </div>
+
         <small class="text-muted"><b>{{ percent }}</b> / 100</small>
         <p class="text-muted mt-2"><small>– Ёбаный рот этого казино, блядь! Ты кто такой, сука, чтоб это сделать?
         </small></p>

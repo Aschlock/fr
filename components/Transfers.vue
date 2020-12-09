@@ -116,4 +116,13 @@ export default {
 
 <style scoped>
 
+.transactions .list-group-item {
+  transition: .2s;
+}
+
+.transactions .list-group-item:hover {
+  background: #f8f9fa;
+  transition: .2s;
+}
+
 </style>
