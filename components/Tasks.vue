@@ -20,14 +20,18 @@
         </small></p>
       </div>
     </div>
-    <div class="px-2">
+    <div class="px-2 d-flex justify-between">
       <div>
         <b-avatar-group size="2rem">
-          <b-avatar to="#" variant="secondary-100"></b-avatar>
+          <b-avatar to="#" variant="secondary-100" src="https://farm66.staticflickr.com/65535/buddyicons/188268936@N07_r.jpg?1594043686#188268936@N07"></b-avatar>
           <b-avatar to="#" variant="secondary-100"></b-avatar>
           <b-avatar to="#" variant="secondary-100"></b-avatar>
           <b-avatar to="#" text="+4" variant="secondary-100"></b-avatar>
         </b-avatar-group>
+      </div>
+      <div class="ml-auto">
+
+        <b-button size="sm" variant="secondary-100" class="text-secondary-200"><b-icon icon="person-dash" class="mr-2"/> Отписаться</b-button>
       </div>
     </div>
   </b-card>
@@ -56,10 +60,6 @@ export default {
 
 .task-body:hover .donut-segment {
   stroke-width: 5px;
-}
-
-.b-avatar-group .b-avatar {
-  border: none;
 }
 
 .donut-segment, .donut-segment:hover {
