@@ -6,6 +6,7 @@
           <h1>
             Настройки
           </h1>
+          <hr/>
         </b-col>
       </b-row>
     </b-container>

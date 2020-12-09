@@ -1,6 +1,6 @@
 <template>
   <b-col xl="3" lg="6" md="" sm="12" class="mb-3">
-    <b-card body-class="px-4 py-3" class="shadow-sm border-0">
+    <b-card body-class="px-4 py-3" class="shadow-sm transfers">
       <b-card-title class="d-flex">{{ payments.title }}
         <b-button class="ml-auto font-weight-bold d-flex align-items-center text-secondary-200"
                   variant="secondary-100" style="line-height: 1"
@@ -50,9 +50,9 @@
                 </b-tooltip>
               </div>
               <div>
-                <p v-if="item.isIncome" class="text-success font-weight-bold text-nowrap">+{{ Number(item.sum).toLocaleString('ru-RU') }}
+                <p v-if="item.isIncome" class="text-primary font-weight-bold text-nowrap">+{{ Number(item.sum).toLocaleString('ru-RU') }}
                   ₽</p>
-                <p v-else class="text-warning font-weight-bold text-nowrap">–{{ Number(item.sum).toLocaleString('ru-RU') }} ₽</p>
+                <p v-else class="font-weight-bold text-nowrap" style="color: #FE4A49;">–{{ Number(item.sum).toLocaleString('ru-RU') }} ₽</p>
               </div>
             </div>
           </b-list-group-item>
