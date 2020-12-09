@@ -23,7 +23,7 @@
     <div class="px-2 d-flex justify-between">
       <div>
         <b-avatar-group size="2rem">
-          <b-avatar to="#" variant="secondary-100" src="https://farm66.staticflickr.com/65535/buddyicons/188268936@N07_r.jpg?1594043686#188268936@N07"></b-avatar>
+          <b-avatar to="#" variant="secondary-100"></b-avatar>
           <b-avatar to="#" variant="secondary-100"></b-avatar>
           <b-avatar to="#" variant="secondary-100"></b-avatar>
           <b-avatar to="#" text="+4" variant="secondary-100"></b-avatar>
