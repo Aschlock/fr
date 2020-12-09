@@ -57,12 +57,11 @@ export default {
   },
   methods: {
     incrs(index) {
-      if (this.percents[index] < 100 ) {
-        this.percents.splice(index, 1, ++this.percents[index])
-      }
+      this.$store.commit('tasks/qweqwe', index)
     },
   },
   layout: 'lk',
+
   computed: {
     total: function () {
       let total = {
@@ -70,7 +69,6 @@ export default {
         pay: 0,
         amount: 0
       }
-
       this.payments.items.forEach(function (payment) {
         if (payment.isIncome) {
           total.income += +payment.sum
@@ -78,16 +76,20 @@ export default {
           total.pay += +payment.sum
         }
       })
-
       total.amount = total.income - total.pay;
-
       for (let i in total) {
         total[i] = total[i].toLocaleString('ru')
       }
 
       return total
+    },
+
+    percents: function () {
+      return this.$store.state.tasks.tasks
     }
+
   },
+
   data() {
     return {
       payments:
@@ -127,13 +129,6 @@ export default {
             },
           ]
         },
-      percents: [
-        100,
-        4,
-        95,
-        0
-      ]
-
     }
   },
 }

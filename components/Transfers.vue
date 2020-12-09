@@ -45,7 +45,7 @@
                 <p class="mb-0">{{ item.payer }}</p>
                 <small class="text-muted" :id="'tooltip-' + index">№{{ payments.items.length - index }},
                   {{ item.date.toLocaleDateString('ru') }}</small>
-                <b-tooltip title="123" triggers="hover" :target="'tooltip-' + index">
+                <b-tooltip title="123" triggers="hover" :target="'tooltip-' + index" noninteractive>
                   {{ item.date.toLocaleString('ru') }}
                 </b-tooltip>
               </div>
